@@ -1,0 +1,16 @@
+*
+
+## Git related
+!.gitignore
+!.gitconfig
+
+## Vim related 
+!.vimrc
+!.vim/autoload/*
+
+## Bash and base terminal related
+!.bashrc
+!.zshrc
+!.p10k.zsh
+
+
