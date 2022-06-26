@@ -6,11 +6,12 @@
 
 ## Vim related 
 !.vimrc
-!.vim/autoload/*
 
 ## Bash and base terminal related
 !.bashrc
 !.zshrc
 !.p10k.zsh
 
-
+### .config folder
+!.config/gh/config.yml
+!.config/nvim/init.vim
