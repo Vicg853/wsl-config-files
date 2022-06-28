@@ -42,6 +42,8 @@ Plug 'github/copilot.vim'
 "-- Productivity
 "--- --- Nvim tree
 Plug 'kyazdani42/nvim-tree.lua'
+"--- --- Nvim hydra
+Plug 'anuvyklack/hydra.nvim'
 
 "-- Git related
 "-- -- Gitsigns

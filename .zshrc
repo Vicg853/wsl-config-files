@@ -167,3 +167,6 @@ compinit -u
 ## Bat CLI config
 export BAT_THEME="Sublime Snazzy"
 alias cat="batcat"
+
+## Neovide exec shortcut
+alias vide="/mnt/c/Users/vicg8/scoop/apps/neovide/0.8.0/neovide.exe --wsl"
