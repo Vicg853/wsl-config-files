@@ -16,6 +16,14 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
 "--- --- Notify
 Plug 'rcarriga/nvim-notify'
+"--- --- Staline
+Plug 'tamton-aquib/staline.nvim'
+"--- --- Barbar
+Plug 'romgrk/barbar.nvim'
+"--- --- Colorizer
+Plug 'norcalli/nvim-colorizer.lua'
+"--- --- Blank line
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 
 "-- Installing LSP and related
@@ -23,7 +31,7 @@ Plug 'rcarriga/nvim-notify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "-- Ident
-"--- --- Tree sitter
+"--- --- Nvim Tree (the file explorer)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
@@ -31,6 +39,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "--- --- Github Copilot 
 Plug 'github/copilot.vim'
 
+"-- Productivity
+"--- --- Nvim tree
+Plug 'kyazdani42/nvim-tree.lua'
 
 "-- Git related
 "-- -- Gitsigns

@@ -4,7 +4,7 @@ set encoding=utf-8
 set hidden
 set termguicolors
 set number
-set cmdheight=2
+set cmdheight=1
 set updatetime=300
 
 "-- Font related configs
@@ -17,7 +17,9 @@ set mouse=a
 set nobackup
 set nowritebackup
 set shortmess+=c
-set signcolumn=number
+
+"-- Misc. configs
+set signcolumn=yes:2
 
 "Adding external configs
 "source ~/.vim/config/vim-plug.vim

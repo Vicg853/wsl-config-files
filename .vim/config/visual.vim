@@ -1,24 +1,12 @@
 "Visual related configs
 
+"-- Base configs
+highlight SignColumn guibg=#00000000
+
 "-- Tokyonight setup
-let g:lightline = {'colorscheme': 'tokyonight'}
-let g:tokyonight_style = "storm"
-
-let g:tokyonight_italic_comments = 1
-let g:tokyonight_transparent = 0
-let g:tokyonight_dark_sidebar = 0
-let g:tokyonight_italic_keywords = 0
-
-lua vim.g.tokyonight_colors = { hint = "#91ceff", error = "#ff6b6b", warning = "#ffc085" }
-
-set t_8f=\[[38;2;%lu;%lu;%lum
-set t_8b=\[[48;2;%lu;%lu;%lum
-
-"-- Initing tokyonight plus its configs
-colorscheme tokyonight
+source ~/.vim/config/visual/tokyonight.vim
 
 "-- Notify configs
-
 lua vim.notify = require("notify") 
 
 lua << EOF
@@ -33,7 +21,7 @@ vim.notify.setup({
       WARN = ""
    },
    level = 2,
-   minimum_width = 90,
+   minimum_width = 20,
    render = "default",
    stages = "fade_in_slide_out",
    timeout = 3000
@@ -50,6 +38,17 @@ function coc_notify(msg, level)
 end
 EOF
 
+"-- Staline
+source ~/.vim/config/visual/staline.vim
+
+"-- Barbar
+source ~/.vim/config/visual/barbar.vim
+
+"-- Colorizer
+lua require('colorizer').setup()
+
+"-- Ident blankline
+source ~/.vim/config/visual/ident-blank-ln.vim
 
 "-- Neovide
 let g:neovide_refresh_rate=90
