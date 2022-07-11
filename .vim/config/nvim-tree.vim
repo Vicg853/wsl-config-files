@@ -1,7 +1,5 @@
 lua << EOF
 require("nvim-tree").setup({
-	open_on_setup = true,
-	ignore_ft_on_setup = { "Dashboard" },
 	auto_reload_on_write = true,
 	create_in_closed_folder = true,
 	open_on_tab = true,
@@ -12,7 +10,8 @@ require("nvim-tree").setup({
 		show_on_dirs = true
 	},
 	git = {
-		enable = true
+		enable = true,
+		ignore = false,
 	},
 	view = {
 		hide_root_folder = true,
@@ -21,20 +20,25 @@ require("nvim-tree").setup({
 		side = 'left'
 	},
 	renderer = {
+		highlight_opened_files = 'all',
 		add_trailing = true,
 		icons = {
-			git_placement = 'after',
+			git_placement = 'signcolumn',
 			glyphs = {
 				git = {
-					unstaged = '',
-					staged = '',
-					unmerged = '',
-					renamed = '',
-					untracked = '',
-					deleted = '',
-					ignored = ''
-				}
+                  			unstaged = "✗",
+                  			staged = "✓",
+                  			unmerged = "",
+                  			renamed = "➜",
+                  			untracked = "★",
+                  			deleted = "",
+	                  		ignored = "·"
+		  		}
 			}
+
+		},
+		indent_markers = {
+			enable = true
 		}
 	},
 	actions = {
@@ -43,7 +47,7 @@ require("nvim-tree").setup({
 			global = true
 		},
                 open_file = {
-			resize_window = false
+			resize_window = false,
 		}
 	},
 	filters = {

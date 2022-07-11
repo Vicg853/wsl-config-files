@@ -33,11 +33,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 "-- Completion trigger
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+inoremap <silent><expr> <C-d>c coc#_complete()
 
 "-- Diagnostics navigation 
 nmap <silent> g[ <Plug>(coc-diagnostic-prev)
@@ -58,12 +54,6 @@ nmap <leader>gf  <Plug>(coc-format-selected)
 
 "-- Codelens on curr line
 nmap <leader>gl  <Plug>(coc-codelens-action)
-
-"-- Floating window navigation 
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-   inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-   inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-endif
 
 "-- Format buffer command
 command! -nargs=0 Format :call CocActionAsync('format')

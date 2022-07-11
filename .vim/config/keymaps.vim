@@ -50,7 +50,7 @@ Hydra({
 EOF
 
 "Move to the left
-nnoremap <silent> <C-Left>  <C-w>h
+noremap <silent> <C-Left>  <C-w>h
 nnoremap <silent> <C-h>  <C-w>h
 "Move to the right
 nnoremap <silent> <C-Right> <C-w>l
@@ -89,3 +89,5 @@ nnoremap <silent> <C-b>f <Cmd>NvimTreeFocus<CR>
 "Built in when focused: Shift-r
 "
 
+"-- Github copilot
+imap <silent><script><expr> <C-d>g copilot#Accept("\<CR>")

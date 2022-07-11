@@ -30,6 +30,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 "--- --- CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+
 "-- Ident
 "--- --- Nvim Tree (the file explorer)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -39,11 +40,24 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "--- --- Github Copilot 
 Plug 'github/copilot.vim'
 
-"-- Productivity
+
+"-- File management and related
 "--- --- Nvim tree
 Plug 'kyazdani42/nvim-tree.lua'
+"--- --- Vim clap
+Plug 'liuchengxu/vim-clap'
+"--- --- Telescope
+Plug 'nvim-telescope/telescope.nvim'
+"--- --- Plenary
+Plug 'nvim-lua/plenary.nvim'
+"--- --- Dashboard
+Plug 'glepnir/dashboard-nvim'
+
+"-- Productivity
 "--- --- Nvim hydra
 Plug 'anuvyklack/hydra.nvim'
+"--- --- lexima
+Plug 'cohama/lexima.vim'
 
 "-- Git related
 "-- -- Gitsigns
