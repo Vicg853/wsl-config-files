@@ -137,18 +137,8 @@ alias clean="clear && cd ~ && neofetch"
 export PATH=$(echo "$PATH" | sed -e 's/:\/mnt\/c\/Users\/vicg8\/AppData\/Roaming\/npm//')
 export PATH="$HOME/.yarn/bin:/home/vicg853/.deno/bin:$PATH"
 
-#Exporting futter path
-export PATH="$PATH:/etc/flutter/bin"
-
 #Needed vars for flutter
 export CHROME_EXECUTABLE="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
-
-#Android
-export ANDROID_HOME=/etc/android-sdk
-export PATH="$PATH:$ANDROID_HOME/"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$ANDROID_HOME/cmdline-tools/tools/bin"
-export PATH="$PATH:$ANDROID_HOME/cmdline-tools/tools/lib"
 
 #Fly.io cli path
 export FLYCTL_INSTALL="/home/vicg853/.fly"
