@@ -71,6 +71,8 @@ nnoremap <silent> <C-k>S <Cmd>wa<CR>
 nnoremap <silent> <C-k>q <Cmd>wqall<CR>
 "Quit without saving
 nnoremap <silent> <C-k>d <Cmd>quit<CR>
+"Save session
+nnoremap <silent> <C-s>s :SessionSave<space>
 
 "Nvim-tree (file tree)
 "Toggle
@@ -91,3 +93,6 @@ nnoremap <silent> <C-b>f <Cmd>NvimTreeFocus<CR>
 
 "-- Github copilot
 imap <silent><script><expr> <C-d>g copilot#Accept("\<CR>")
+
+"-- Telescope
+noremap <silent> <C-p> <Cmd>:Telescope command_palette<CR>

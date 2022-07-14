@@ -47,6 +47,10 @@ source ~/.vim/config/visual/barbar.vim
 "-- Colorizer
 lua require('colorizer').setup()
 
+"-- Virt column
+highlight VirtColumn guibg=#ffcb75
+lua require("virt-column").setup()
+
 "-- Ident blankline
 source ~/.vim/config/visual/ident-blank-ln.vim
 

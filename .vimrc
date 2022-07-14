@@ -21,12 +21,9 @@ set shortmess+=c
 "-- Misc. configs
 set signcolumn=yes:2
 
-"Adding external configs
-"source ~/.vim/config/vim-plug.vim
-"source ~/.vim/config/visual.vim
-
 "-- Initing vim-plug before other plugins to prevent issues
 source ~/.vim/config/vim-plug.vim
+
 
 let file_list = split(globpath('~/.vim/config/', '*.vim'), '\n')
 

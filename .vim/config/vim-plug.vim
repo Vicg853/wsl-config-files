@@ -24,6 +24,8 @@ Plug 'romgrk/barbar.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 "--- --- Blank line
 Plug 'lukas-reineke/indent-blankline.nvim'
+"--- --- Virt column
+Plug 'lukas-reineke/virt-column.nvim'
 
 
 "-- Installing LSP and related
@@ -42,16 +44,20 @@ Plug 'github/copilot.vim'
 
 
 "-- File management and related
-"--- --- Nvim tree
-Plug 'kyazdani42/nvim-tree.lua'
-"--- --- Vim clap
-Plug 'liuchengxu/vim-clap'
-"--- --- Telescope
-Plug 'nvim-telescope/telescope.nvim'
 "--- --- Plenary
 Plug 'nvim-lua/plenary.nvim'
+"--- --- Telescope
+Plug 'nvim-telescope/telescope.nvim'
+"--- --- --- coc integration
+Plug 'fannheyward/telescope-coc.nvim'
+"--- --- --- gh cli integration
+Plug 'nvim-telescope/telescope-github.nvim'
+"--- --- --- command palette window
+Plug 'LinArcX/telescope-command-palette.nvim'
 "--- --- Dashboard
 Plug 'glepnir/dashboard-nvim'
+"--- --- Nvim tree
+Plug 'kyazdani42/nvim-tree.lua'
 
 "-- Productivity
 "--- --- Nvim hydra
