@@ -91,6 +91,10 @@ nnoremap <silent> <C-b>f <Cmd>NvimTreeFocus<CR>
 "Built in when focused: Shift-r
 "
 
+"-- Ident
+nmap <silent> <C-i>1 :set expandtab tabstop=3 shiftwidth=3 softtabstop=3<CR>
+nmap <silent> <C-i>2 :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+
 "-- Github copilot
 imap <silent><script><expr> <C-d>g copilot#Accept("\<CR>")
 

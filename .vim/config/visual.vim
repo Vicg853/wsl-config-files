@@ -54,6 +54,9 @@ lua require("virt-column").setup()
 "-- Ident blankline
 source ~/.vim/config/visual/ident-blank-ln.vim
 
+"-- Identation
+set expandtab tabstop=3 shiftwidth=3 softtabstop=3
+
 "-- Neovide
 let g:neovide_refresh_rate=90
 
