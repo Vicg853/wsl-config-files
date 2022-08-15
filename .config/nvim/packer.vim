@@ -10,7 +10,10 @@ end
 return require('packer').startup({function(use)
   -- Visual tools
   -- -- Dashboard
-  use 'glepnir/dashboard-nvim'
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
 
   -- Identation, code completion and related
   -- -- Treesitter
@@ -30,6 +33,15 @@ return require('packer').startup({function(use)
   use { "williamboman/mason.nvim" }
 
   -- File management
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
 
   -- Git and related
 
@@ -37,6 +49,17 @@ return require('packer').startup({function(use)
   -- -- Themes
   use 'folke/tokyonight.nvim'
   use 'tanvirtin/monokai.nvim'
+  use 'joshdick/onedark.vim'
+  use { 
+    'mcchrish/zenbones.nvim',
+    requires = "rktjmp/lush.nvim"
+  }
+  use 'rflban/homecolors.vim'
+  use 'doki-theme/doki-theme-vim'
+  use 'preservim/vim-colors-pencil'
+  use 'jacoborus/tender.vim'
+  -- -- Icons 
+  use 'onsails/lspkind.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

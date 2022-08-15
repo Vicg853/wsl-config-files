@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -94,10 +99,20 @@ _G.packer_plugins = {
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["dashboard-nvim"] = {
+  ["doki-theme-vim"] = {
     loaded = true,
-    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
-    url = "https://github.com/glepnir/dashboard-nvim"
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/doki-theme-vim",
+    url = "https://github.com/doki-theme/doki-theme-vim"
+  },
+  ["homecolors.vim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/homecolors.vim",
+    url = "https://github.com/rflban/homecolors.vim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
@@ -124,15 +139,40 @@ _G.packer_plugins = {
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedark.vim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/onedark.vim",
+    url = "https://github.com/joshdick/onedark.vim"
+  },
+  ["tender.vim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/tender.vim",
+    url = "https://github.com/jacoborus/tender.vim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-colors-pencil"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/vim-colors-pencil",
+    url = "https://github.com/preservim/vim-colors-pencil"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["zenbones.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
+    url = "https://github.com/mcchrish/zenbones.nvim"
   }
 }
 

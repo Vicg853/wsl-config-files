@@ -18,6 +18,7 @@ local function border(hl_name)
 end
 
 local cmp = require'cmp'
+local lspkind = require'lspkind'
 
 cmp.setup({
   snippet = {
@@ -34,6 +35,18 @@ cmp.setup({
     documentation = {
       border = border "CmpDocBorder",
     },
+  },
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol_text', -- show only symbol annotations
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      menu = {
+        buffer = '[BUF]',
+        nvim_lsp = '[LSP]',
+        nvim_lua = '[API]',
+        path = '[PATH]',
+      }
+    })
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-g>"] = cmp.mapping.select_prev_item(),
