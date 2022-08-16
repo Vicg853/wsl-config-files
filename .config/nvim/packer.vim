@@ -50,6 +50,9 @@ return require('packer').startup({function(use)
     requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
   }
 
+  -- Keymaps and related advanced tools
+  use 'anuvyklack/hydra.nvim'
+
   -- Git and related
   use {
     'lewis6991/gitsigns.nvim',
@@ -71,8 +74,29 @@ return require('packer').startup({function(use)
   use 'doki-theme/doki-theme-vim'
   use 'preservim/vim-colors-pencil'
   use 'jacoborus/tender.vim'
-  -- -- Icons 
+  -- -- LSP Related
   use 'onsails/lspkind.nvim'
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+	position = "right",
+        indent_lines = true,
+	auto_preview = true,
+	signs = {          
+	  error = "",
+          warning = "",
+          hint = "",
+          information = "",
+          other = "﫠"
+
+        },
+      }
+    end
+  }
+  -- -- Line ident related
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

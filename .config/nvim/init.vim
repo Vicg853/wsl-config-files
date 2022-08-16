@@ -7,3 +7,4 @@ source ~/.config/nvim/visual.vim
 source ~/.config/nvim/lsp.vim
 source ~/.config/nvim/cmp.vim
 source ~/.config/nvim/neo-tree.vim
+source ~/.config/nvim/blank-line.vim
