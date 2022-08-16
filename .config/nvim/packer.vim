@@ -30,9 +30,10 @@ return require('packer').startup({function(use)
   use 'hrsh7th/vim-vsnip'
   
   -- Config and management
-  use { "williamboman/mason.nvim" }
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
 
-  -- File management
+  -- File management and productivity
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -42,8 +43,20 @@ return require('packer').startup({function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+  use 'rmagatti/auto-session'
+  use 'nvim-telescope/telescope.nvim'
+  use { 
+    'rmagatti/session-lens',
+    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+  }
 
   -- Git and related
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   -- Visual
   -- -- Themes

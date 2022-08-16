@@ -74,6 +74,12 @@ _G.packer_plugins = {
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["auto-session"] = {
+    config = { "\27LJ\2\2Q\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0" },
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -114,6 +120,11 @@ _G.packer_plugins = {
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -123,6 +134,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
+  },
+  ["neo-tree.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -148,6 +169,22 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/onedark.vim",
     url = "https://github.com/joshdick/onedark.vim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["session-lens"] = {
+    config = { "\27LJ\2\2‘\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\1K\0\1\0\17path_display\1\0\2\14previewer\2\17prompt_title\27-----* SESSIONS *-----\1\2\0\0\fshorten\nsetup\17session-lens\frequire\0" },
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/session-lens",
+    url = "https://github.com/rmagatti/session-lens"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/vicg853/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tender.vim"] = {
     loaded = true,
@@ -177,6 +214,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+try_loadstring("\27LJ\2\2Q\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")
+time([[Config for auto-session]], false)
+-- Config for: session-lens
+time([[Config for session-lens]], true)
+try_loadstring("\27LJ\2\2‘\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\1K\0\1\0\17path_display\1\0\2\14previewer\2\17prompt_title\27-----* SESSIONS *-----\1\2\0\0\fshorten\nsetup\17session-lens\frequire\0", "config", "session-lens")
+time([[Config for session-lens]], false)
 if should_profile then save_profiles() end
 
 end)
