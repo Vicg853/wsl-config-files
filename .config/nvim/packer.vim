@@ -43,11 +43,27 @@ return require('packer').startup({function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+  use {
+    'kazhala/close-buffers.nvim',
+    config = function()
+      require'close_buffers'.setup {}
+    end
+  }
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   use 'rmagatti/auto-session'
   use 'nvim-telescope/telescope.nvim'
   use { 
     'rmagatti/session-lens',
     requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+  }
+  use {
+    'fgheng/winbar.nvim',
+    requires = { "SmiteshP/nvim-gps", "nvim-treesitter/nvim-treesitter", 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require('winbar').setup {
+        enabled = true
+      }
+    end
   }
 
   -- Keymaps and related advanced tools
@@ -81,11 +97,11 @@ return require('packer').startup({function(use)
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
       require("trouble").setup {
-	position = "right",
+	      position = "right",
         indent_lines = true,
-	auto_preview = true,
-	signs = {          
-	  error = "",
+	      auto_preview = true,
+	      signs = {
+	        error = "",
           warning = "",
           hint = "",
           information = "",
@@ -97,6 +113,8 @@ return require('packer').startup({function(use)
   }
   -- -- Line ident related
   use "lukas-reineke/indent-blankline.nvim"
+  -- -- Bottom bar
+  use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -19,8 +19,16 @@ noremap <silent> <C-j> <C-w>j
 noremap <SPACE>c t :lua << EOF require("lsp_lines").toggle EOF<CR>
 
 "-- Tab_ident config
-nmap <silent> <C-i>1 :set expandtab tabstop=3 shiftwidth=3 softtabstop=3<CR>
-nmap <silent> <C-i>2 :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+noremap <silent> <SPACE>i 1 :set expandtab tabstop=3 shiftwidth=3 softtabstop=3<CR>
+noremap <silent> <SPACE>i 2 :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 
 command! -nargs=1 -bar CustomTabWidth :set expandtab tabstop=<args> shiftwidth=<args> softtabstop=<args>
-nmap <silent> <C-i>3 :CustomTabWidth<space>
+noremap <silent> <SPACE>i 3 :CustomTabWidth<space>
+
+"-- Buffers
+nnoremap <silent> <A-p> :BufferLinePick<CR>
+noremap <silent> <A-.> :bnext<CR>
+noremap <silent> <A-,> :bprevious<CR>
+noremap <silent> <A-_> :BDelete this<CR>
+nnoremap <silent> <A-m>. :BufferLineMoveNext<CR>
+nnoremap <silent> <A-m>, :BufferLineMovePrev<CR>

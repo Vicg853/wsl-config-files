@@ -1,0 +1,164 @@
+set laststatus=3
+
+lua << EOF
+local function diag_enable(f, s)
+  return function()
+    local diag = f()[s]
+    return diag and diag ~= 0
+  end
+end
+
+local function diag_of(f, s)
+  local icon = icons[s]
+  return function()
+    local diag = f()[s]
+    return icon .. diag
+  end
+end
+
+require('feline').setup({
+  force_inactive = {
+    filetypes = {
+      'packer',
+      'neo-tree',
+      'notify'
+    },
+    buftypes = {'terminal'},
+  },
+  components = {
+    active = {
+      {
+        {
+          provider = function()
+            local os = vim.bo.fileformat:upper()
+            local icon
+            if os == 'UNIX' then
+              icon = '    '
+            elseif os == 'MAC' then
+              icon = '    '
+            else
+              icon = '    '
+            end
+            return icon           
+          end, 
+          hl = function() 
+            return {
+              bg = require('feline.providers.vi_mode').get_mode_color(),
+              fg = 'White',
+              style = 'bold'
+            }
+          end
+        },
+        { 
+          provider = function() 
+            local mode = vim.api.nvim_get_mode()["mode"]:upper()
+            return mode .. ' '
+          end,
+          hl = function()
+            return {
+                name = require('feline.providers.vi_mode').get_mode_highlight_name(),
+                bg = require('feline.providers.vi_mode').get_mode_color(),
+                fg = 'White',
+            }
+          end,
+          icon = ''
+        },
+        {
+          provider = 'file_info',
+          file_modified_icon = '✎',
+          filetype_icon = true,
+          hl = function() 
+            return {
+              name = "",
+              bg = vim.o.background,
+              fg = 'White'
+            }
+          end,
+          left_sep = " ",
+          right_sep = " ",
+          case = 'uppercase'
+        },
+        {
+          branch = {
+            provider = 'git_branch',
+            icon = '',
+            left_sep = ' ',
+            hl = {
+              fg = 'White',
+              style = 'bold'
+            },
+          },
+          add = {
+            provider = 'git_diff_added',
+            hl = {
+              fg = 'Green'
+            }
+          },
+          change = {
+            provider = 'git_diff_changed',
+            hl = {
+              fg = 'Orange'
+            }
+          },
+          remove = {
+            provider = 'git_diff_removed',
+            hl = {
+              fg = 'Red'
+            }
+          }
+        }
+      },
+      { },
+      {
+
+        diagnos = {
+          err = {
+            provider = diag_of(lsp_diagnostics_info, 'errs'),
+            left_sep = ' ',
+            enabled = diag_enable(lsp_diagnostics_info, 'errs'),
+            hl = {
+                fg = colors.red
+            }
+          },
+          warn = {
+            provider = diag_of(lsp_diagnostics_info, 'warns'),
+            left_sep = ' ',
+            enabled = diag_enable(lsp_diagnostics_info, 'warns'),
+            hl = {
+                fg = colors.yellow
+            }
+          },
+          info = {
+            provider = diag_of(lsp_diagnostics_info, 'infos'),
+            left_sep = ' ',
+            enabled = diag_enable(lsp_diagnostics_info, 'infos'),
+            hl = {
+                fg = colors.blue
+            }
+          },
+          hint = {
+            provider = diag_of(lsp_diagnostics_info, 'hints'),
+            left_sep = ' ',
+            enabled = diag_enable(lsp_diagnostics_info, 'hints'),
+            hl = {
+                fg = colors.cyan
+            }
+          },
+        },
+        {
+          name = {
+            provider = 'lsp_client_names',
+            right_sep = ' ',
+            icon = '  ',
+            hl = {
+                fg = 'White'
+            }
+          }
+        },
+        { provider = 'scroll_bar' }
+      }
+    },
+    inactive = { }
+  }
+})
+EOF
