@@ -1,6 +1,20 @@
 set laststatus=3
 
 lua << EOF
+local icons = {
+  linux = '',
+  macos = '',
+  windows = '',
+
+  errs = '',
+  warns = '',
+  infos = '',
+  hints = '',
+
+  lsp = '',
+  git = ''
+}
+
 local function diag_enable(f, s)
   return function()
     local diag = f()[s]
@@ -110,14 +124,13 @@ require('feline').setup({
       },
       { },
       {
-
         diagnos = {
           err = {
             provider = diag_of(lsp_diagnostics_info, 'errs'),
             left_sep = ' ',
             enabled = diag_enable(lsp_diagnostics_info, 'errs'),
             hl = {
-                fg = colors.red
+                fg = 'Red' 
             }
           },
           warn = {
@@ -125,7 +138,7 @@ require('feline').setup({
             left_sep = ' ',
             enabled = diag_enable(lsp_diagnostics_info, 'warns'),
             hl = {
-                fg = colors.yellow
+                fg = 'Yellow'
             }
           },
           info = {
@@ -133,7 +146,7 @@ require('feline').setup({
             left_sep = ' ',
             enabled = diag_enable(lsp_diagnostics_info, 'infos'),
             hl = {
-                fg = colors.blue
+                fg = 'Blue'
             }
           },
           hint = {
@@ -141,7 +154,7 @@ require('feline').setup({
             left_sep = ' ',
             enabled = diag_enable(lsp_diagnostics_info, 'hints'),
             hl = {
-                fg = colors.cyan
+                fg = 'Cyan'
             }
           },
         },
@@ -149,7 +162,7 @@ require('feline').setup({
           name = {
             provider = 'lsp_client_names',
             right_sep = ' ',
-            icon = '  ',
+            --  icon = '  ',
             hl = {
                 fg = 'White'
             }
