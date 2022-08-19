@@ -1,3 +1,6 @@
+## GPG Keys tty export
+export GPG_TTY="$(tty)"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -158,6 +161,9 @@ compinit -u
 export BAT_THEME="Sublime Snazzy"
 alias cat="batcat"
 
+## Sportify-tui alias
+alias spt="~/Programs/spt"
+
 ## Neovide exec shortcut
 alias vide="/mnt/c/Users/vicg8/scoop/apps/neovide/0.8.0/neovide.exe --wsl"
 
@@ -167,3 +173,7 @@ alias vide="/mnt/c/Users/vicg8/scoop/apps/neovide/0.8.0/neovide.exe --wsl"
 # Bun
 export BUN_INSTALL="/home/vicg853/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+### Manual Rust analyser bin installation
+export PATH="~/.local/bin:$PATH"
+export GPG_TTY=$(tty)
