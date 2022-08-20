@@ -1,5 +1,7 @@
 ## GPG Keys tty export
-export GPG_TTY="$(tty)"
+export GPG_TTY=$TTY
+
+neofetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -118,8 +120,6 @@ export ENABLE_VIRTUAL_TERMINAL_INPUT=true
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-neofetch
-
 alias folder="explorer.exe ."
 alias lsa="ls -a"
 alias code='/mnt/c/"Program Files"/"Microsoft VS Code"/bin/code'
@@ -176,4 +176,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 ### Manual Rust analyser bin installation
 export PATH="~/.local/bin:$PATH"
-export GPG_TTY=$(tty)
