@@ -79,6 +79,7 @@ require('feline').setup({
         },
         {
           provider = 'file_info',
+<<<<<<< HEAD
           file_modified_icon = '✎',
           filetype_icon = true,
           hl = function() 
@@ -119,11 +120,46 @@ require('feline').setup({
             hl = {
               fg = 'Red'
             }
+=======
+	        opts = {
+            case = 'uppercase',
+            file_modified_icon = '✎ ',
+          }, 
+          left_sep = " ",
+          right_sep = " "
+        }, 
+        {
+          provider = 'git_branch',
+          icon = '',
+          left_sep = ' ',
+          hl = {
+            fg = 'White',
+            style = 'bold'
+          },
+        },
+        {
+          provider = 'git_diff_added',
+          hl = {
+            fg = 'Green'
+          }
+        },
+        {
+          provider = 'git_diff_changed',
+          hl = {
+            fg = 'Orange'
+          }
+        },
+        {
+          provider = 'git_diff_removed',
+          hl = {
+            fg = 'Red'
+>>>>>>> 0972130 (Adding colorizer for easy color visualization and fixed some feline configs)
           }
         }
       },
       { },
       {
+<<<<<<< HEAD
         diagnos = {
           err = {
             provider = diag_of(lsp_diagnostics_info, 'errs'),
@@ -166,6 +202,51 @@ require('feline').setup({
             hl = {
                 fg = 'White'
             }
+=======
+        {
+          provider = 'diagnostic_errors',
+          right_sep = ' ', 
+          left_sep = ' ',
+          icon = '🚨',
+          hl = {
+            fg = 'Red' 
+          }
+        },
+        {
+          provider = 'diagnostic_warnings',
+      	  right_sep = ' ',
+	        left_sep = ' ',
+          icon = '⚠',
+          hl = {
+            fg = 'Yellow'
+          }
+        },
+        {
+          provider = 'diagnostic_hints',
+	        icon = '💡',
+          left_sep = ' ',
+	        right_sep = ' ',
+          hl = {
+            fg = 'Blue'
+          }
+        },
+        {
+          provider = 'diagnostic_info',
+          icon = '🛈',
+          left_sep = ' ',
+          right_sep = ' ',
+          hl = {
+            fg = 'Cyan'
+          }
+        },
+        {
+          provider = 'lsp_client_names',
+          right_sep = ' ',
+          left_sep = ' ',
+          icon = ' ',
+          hl = {
+            fg = 'White'
+>>>>>>> 0972130 (Adding colorizer for easy color visualization and fixed some feline configs)
           }
         },
         { provider = 'scroll_bar' }

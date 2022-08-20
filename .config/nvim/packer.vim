@@ -113,6 +113,15 @@ return require('packer').startup({function(use)
   }
   -- -- Line ident related
   use "lukas-reineke/indent-blankline.nvim"
+<<<<<<< HEAD
+=======
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function() 
+      require'colorizer'.setup()
+    end
+  }
+>>>>>>> 0972130 (Adding colorizer for easy color visualization and fixed some feline configs)
   -- -- Bottom bar
   use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
 
