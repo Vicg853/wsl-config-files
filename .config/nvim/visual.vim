@@ -1,11 +1,13 @@
 "-- Setting up initial theme 
-let g:tokyonight_style = "night"
-let g:tokyonight_transparent = 1
-let g:tokyonight_sidebars = ["qf", "vista_kind", "terminal", "packer"]
-let g:tokyonight_dark_float = 1
-let g:tokyonight_dark_sidebar = 1
+if has('termguicolors')
+  set termguicolors
+endif
+"--let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+"--let g:sonokai_transparent_background = 1
+let g:sonokai_disable_italic_comment = 1
 
-colorscheme duckbones
+colorscheme sonokai
 
 "-- Curr line highligth
 set cursorline cursorcolumn

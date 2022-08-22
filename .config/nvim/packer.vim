@@ -86,10 +86,7 @@ return require('packer').startup({function(use)
     'mcchrish/zenbones.nvim',
     requires = "rktjmp/lush.nvim"
   }
-  use 'rflban/homecolors.vim'
-  use 'doki-theme/doki-theme-vim'
-  use 'preservim/vim-colors-pencil'
-  use 'jacoborus/tender.vim'
+  use 'sainnhe/sonokai'
   -- -- LSP Related
   use 'onsails/lspkind.nvim'
   use {
