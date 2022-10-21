@@ -14,6 +14,8 @@ return require('packer').startup({function(use)
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
+  -- -- Terminal
+  use 'voldikss/vim-floaterm'
 
   -- Identation, code completion and related
   -- -- Treesitter
@@ -64,6 +66,20 @@ return require('packer').startup({function(use)
         enabled = true
       }
     end
+  }
+  
+  use {
+    "sayanarijit/xplr.vim",
+    config = function()
+      vim.cmd([[
+        let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Debug' } }
+        let g:nnn#action = {
+              \ '<c-t>': 'tab split',
+              \ '<c-x>': 'split',
+              \ '<c-v>': 'vsplit' }
+        let g:nnn#replace_netrw = 1
+      ]])
+    end,
   }
 
   -- Keymaps and related advanced tools

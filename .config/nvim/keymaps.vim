@@ -32,3 +32,14 @@ noremap <silent> <A-,> :bprevious<CR>
 noremap <silent> <A-_> :BDelete this<CR>
 nnoremap <silent> <A-m>. :BufferLineMoveNext<CR>
 nnoremap <silent> <A-m>, :BufferLineMovePrev<CR>
+
+"-- Floatterm
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<A-,>'
+let g:floaterm_keymap_next   = '<A-.>'
+let g:floaterm_keymap_kill = '<A-_>'
+let g:floaterm_keymap_toggle = '<F8>'
+tnoremap   <silent>   <F6>  <C-\><C-n>:FloatermNew xplr<CR>
+nnoremap   <silent>   <F6>  :FloatermNew xplr<CR>
+tnoremap   <silent>   <F5>  <C-\><C-n>:FloatermNew gitui<CR>
+nnoremap   <silent>   <F5>  :FloatermNew gitui<CR>
