@@ -2,6 +2,7 @@ lua << EOF
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
+
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   vim.cmd [[packadd packer.nvim]]
@@ -67,20 +68,6 @@ return require('packer').startup({function(use)
       }
     end
   }
-  
-  use {
-    "sayanarijit/xplr.vim",
-    config = function()
-      vim.cmd([[
-        let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Debug' } }
-        let g:nnn#action = {
-              \ '<c-t>': 'tab split',
-              \ '<c-x>': 'split',
-              \ '<c-v>': 'vsplit' }
-        let g:nnn#replace_netrw = 1
-      ]])
-    end,
-  }
 
   -- Keymaps and related advanced tools
   use 'anuvyklack/hydra.nvim'
@@ -95,12 +82,15 @@ return require('packer').startup({function(use)
 
   -- Visual
   -- -- Themes
+
   use 'folke/tokyonight.nvim'
   use 'tanvirtin/monokai.nvim'
   use 'joshdick/onedark.vim'
   use { 
     'mcchrish/zenbones.nvim',
+
     requires = "rktjmp/lush.nvim"
+
   }
   use 'sainnhe/sonokai'
   -- -- LSP Related
@@ -109,8 +99,11 @@ return require('packer').startup({function(use)
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
+
       require("trouble").setup {
+
 	      position = "right",
+
         indent_lines = true,
 	      auto_preview = true,
 	      signs = {
@@ -132,6 +125,7 @@ return require('packer').startup({function(use)
       require'colorizer'.setup()
     end
   }
+
   -- -- Bottom bar
   use { 'feline-nvim/feline.nvim', branch = '0.5-compat' }
 
