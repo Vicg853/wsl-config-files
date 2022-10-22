@@ -35,10 +35,10 @@ nnoremap <silent> <A-m>, :BufferLineMovePrev<CR>
 
 "-- Floatterm
 let g:floaterm_keymap_new    = '<F7>'
-let g:floaterm_keymap_prev   = '<A-,>'
-let g:floaterm_keymap_next   = '<A-.>'
-let g:floaterm_keymap_kill = '<A-_>'
 let g:floaterm_keymap_toggle = '<F8>'
+tnoremap   <silent>   <A-,>  <C-\><C-n>:FloatermPrev<CR>
+tnoremap   <silent>   <A-.>  <C-\><C-n>:FloatermNext<CR>
+tnoremap   <silent>   <A-_>  <C-\><C-n>:FloatermKill<CR>
 tnoremap   <silent>   <F6>  <C-\><C-n>:FloatermNew xplr<CR>
 nnoremap   <silent>   <F6>  :FloatermNew xplr<CR>
 tnoremap   <silent>   <F5>  <C-\><C-n>:FloatermNew gitui<CR>
